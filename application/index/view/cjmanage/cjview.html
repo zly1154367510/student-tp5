@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head runat="server">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>欢迎</title>
+   
+    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/student-tp5/public/static/css/alogin.css" /> -->
+<link href="http://localhost/student-tp5/public/static/css/css.css" type="text/css" rel="stylesheet" />
+  
+<link href="http://localhost/student-tp5/public/static/css/bootstrap.css" type="text/css" rel="stylesheet" />
+
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="header">
+  <tr>
+
+    <td align="left" valign="bottom">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="right" valign="bottom" id="header-name"><h1>学生信息管理</h1></td>
+        <td align="right" valign="top" id="header-right">
+          <a href="{:url('index/Index/canceLogin')}"  onFocus="this.blur()" class="admin-out">注销</a>
+            <a href="index.html" target="top" onFocus="this.blur()" class="admin-home">用户设置</a>
+                  
+            <span>
+<!-- 日历 -->
+
+
+            </span>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+  
+  </tr>
+</table>
+<div id="left-top">
+    <span>用户：admin<br>角色：超级管理员</span>
+</div>
+    <div style="float: left" id="my_menu" class="sdmenu">
+    
+      <div>
+        <a href="{:url('index')}"  onFocus="this.blur()">学生信息管理</a>
+        <a href="{:url('CJview')}"  onFocus="this.blur()" style="background-color: white">成绩管理</a>
+        <a href="main_info.html"  onFocus="this.blur()">角色管理</a>
+        <a href="{:url('EditPwdYe')}"  onFocus="this.blur()" >修改密码</a>
+
+      </div>
+    
+    
+    </div>
+    <div>
+      <h1></h1>
+    </div>
+  <div>
+  <form id="myfrom">
+  根据学号查询：
+    <input type="text" id="xh" >
+    <input type="button" value="查询" onclick="numSelect()">
+<!--   根据姓名查询
+    <input type="text" id="xm" onkeyup="nameSelect()"> -->
+  </form>
+      <table id="cc" class="table" width="1000px">
+          <thead>
+          <a href="{:url('addstu')}"><h3>添加学生</h3></a><br>
+           <tr>
+              <th>学号</th>
+              <th>姓名</th>
+              <th>班级</th>
+              <th>科目</th>
+              <th>成绩</th>
+              
+            </tr>
+          {foreach name="res" item="r"}
+            <tr>
+              <th>{$r['stu_num']}</th>
+              <th>{$r['stu_name']}</th>
+              <th>{$r['stu_class']}</th>
+              <th>{$r['km_name']}</th>
+              <th>{$r['cj']}</th>
+              <th><a href="{:url('editcj',"id=$r[id]")}">修改</a></th>
+              <th><a href="{:url('deletecj',"id=$r[id]")}">删除</a></th>
+            </tr>
+            {/foreach}
+          </thead>
+      </table>
+  </div>
+
+
+ <script type="text/javascript">
+ 
+ // 	function nameSelect(){
+ // 	var xmlhttp = null;  
+ // 	 var data=null;
+	// 	try{
+	// 		xmlhttp = new window.XMLHttpRequest();
+	// 	}catch(e){
+	// 		xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+	// 	}
+	// var value = document.getElementById("xm").value;
+	// var url = "CJview1?name="+value;
+	// xmlhttp.open('GET',url,true);
+	// xmlhttp.send();
+	// xmlhttp.onreadystatechange = function(){
+	// 		if(xmlhttp.readyState==4 && xmlhttp.status==200){	
+	// 	  document.getElementById('cc').innerHTML = xmlhttp.responseText;
+	// 		}
+	// 	}
+ // 	}
+    function numSelect(){
+ 	var xmlhttp = null;  
+ 	 var data=null;
+		try{
+			xmlhttp = new window.XMLHttpRequest();
+		}catch(e){
+			xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+		}
+	var value = document.getElementById("xh").value;
+	var url = "CJview2?num="+value;
+	xmlhttp.open('GET',url,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange = function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){	
+		  document.getElementById('cc').innerHTML = xmlhttp.responseText;
+			}
+		}
+ 	} 	
+ </script>
+</body>
+</html>

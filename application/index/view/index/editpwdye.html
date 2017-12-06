@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>欢迎</title>
+   
+    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/student-tp5/public/static/css/alogin.css" /> -->
+<link href="http://localhost/student-tp5/public/static/css/css.css" type="text/css" rel="stylesheet" />
+  
+<link href="http://localhost/student-tp5/public/static/css/bootstrap.css" type="text/css" rel="stylesheet" />
+
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="header">
+  <tr>
+
+    <td align="left" valign="bottom">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="right" valign="bottom" id="header-name"><h1>学生信息管理</h1></td>
+        <td align="right" valign="top" id="header-right">
+          <a href="{:url('index/Index/canceLogin')}"  onFocus="this.blur()" class="admin-out">注销</a>
+            <a href="index.html" target="top" onFocus="this.blur()" class="admin-home">修改密码</a>
+                  
+            <span>
+<!-- 日历 -->
+<SCRIPT type=text/javascript src="js/clock.js"></SCRIPT>
+<SCRIPT type=text/javascript>showcal();</SCRIPT>
+            </span>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+  
+  </tr>
+</table>
+<div id="left-top">
+    <span>用户：admin<br>角色：超级管理员</span>
+</div>
+    <div style="float: left" id="my_menu" class="sdmenu">
+    
+      <div>
+        <div>
+        <a href="{:url('index')}"  onFocus="this.blur()" >学生信息管理</a>
+        <a href="{:url('Cjmanage')}"  onFocus="this.blur()">成绩管理</a>
+        <a href="main_info.html"  onFocus="this.blur()">角色管理</a>
+        <a href="{:url('EditPwdYe')}"  onFocus="this.blur()" >修改密码</a>
+      </div>
+      </div>
+    
+    
+    </div>
+    <div>
+      <h1></h1>
+    </div>
+  <div class="div1">
+  <form class="bs-docs-example form-horizontal" action="{:url('EditPwdYeDo')}" method="post">
+            
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+               
+
+                
+                原密码：<input type="password" id="inputWarning"  name="password"><br><br>
+              
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                新密码：<input type="password" id="inputError"  name="newPWD"><br><br>
+               
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+               在输入新密码：<input type="password" id="inputError"  name="newPWD1"><br><br>
+               
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                
+
+                <input type="submit" value="提交修改" class="btn"/>
+
+          
+      </form>        
+    
+  </div>
+</body>
+</html>

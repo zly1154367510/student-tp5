@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学生信息修改</title>
+   
+    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/student-tp5/public/static/css/alogin.css" /> -->
+<link href="http://localhost/student-tp5/public/static/css/css.css" type="text/css" rel="stylesheet" />
+
+  
+<link href="http://localhost/student-tp5/public/static/css/bootstrap.css" type="text/css" rel="stylesheet" />
+
+<script src="http://localhost/student-tp5/public/static/js/jquery.js"></script>
+<script src="http://localhost/student-tp5/public/static/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="header">
+  <tr>
+
+    <td align="left" valign="bottom">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="right" valign="bottom" id="header-name"><h1>学生信息修改</h1></td>
+        <td align="right" valign="top" id="header-right">
+          <a href="{:url('index/Index/canceLogin')}"  onFocus="this.blur()" class="admin-out">注销</a>
+            <a href="index.html" target="top" onFocus="this.blur()" class="admin-home">用户设置</a>
+                  
+            <span>
+
+
+            </span>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+  
+  </tr>
+</table>
+<div id="left-top">
+    <span>用户：admin<br>角色：超级管理员</span>
+</div>
+    <div style="float: left" id="my_menu" class="sdmenu">
+    
+       <div>
+        <a href="{:url('index')}"  onFocus="this.blur()" >学生信息管理</a>
+        <a href="{:url('Cjmanage')}"  onFocus="this.blur()">成绩管理</a>
+        <a href="main_info.html"  onFocus="this.blur()">角色管理</a>
+        <a href="{:url('EditPwdYe')}"  onFocus="this.blur()" >修改密码</a>
+        <a href="{:url('index')}"  onFocus="this.blur()" >学生信息管理</a>
+        <a href="{:url('Cjmanage')}"  onFocus="this.blur()">成绩管理</a>
+        <a href="main_info.html"  onFocus="this.blur()">角色管理</a>
+        <a href="{:url('EditPwdYe')}"  onFocus="this.blur()" >修改密码</a>
+  
+      </div>
+    
+    </div>
+
+  
+  <div class="div1">
+  <form class="bs-docs-example form-horizontal" action="{:url('EditStuDo')}" method="post">
+            
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+               
+
+                
+                姓名：<input type="text" id="inputWarning" value="{$r['stu_name']}" name="name"><br><br>
+              
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                学号：<input type="text" id="inputError" value="{$r['stu_num']}" name="num"><br><br>
+               
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                
+
+                性别：<input type="text" id="inputInfo" value="{$r['stu_sex']}" name="sex"><br><br>
+              
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                班级：<input type="text" id="inputSuccess" value="{$r['stu_class']}" name="class"><br><br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="submit" value="提交修改" class="btn"/>
+          
+      </form>        
+    
+  </div>
+</body>
+</html>
